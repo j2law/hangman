@@ -23,7 +23,7 @@ def play():
 
 if __name__ == '__main__':
     play()
-    while controller.replay() == "Yes":
+    while controller.replay():
         play()
     presenter.print_end_game()
 

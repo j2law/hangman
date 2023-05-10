@@ -26,9 +26,11 @@ def get_guess(guessed_letters: List[str]) -> str:
     return letter.lower()
 
 
-def replay() -> str:
+def replay() -> bool:
     reply = input("\033[1;96mREPLAY? (YES or NO): \033[0m")
     while not reply.lower() == "yes" and not reply.lower() == "no":
         print("Invalid Input")
         reply = input("REPLAY? (YES or NO): ")
-    return reply
+    if reply.lower() == "yes":
+        return True
+    return False
